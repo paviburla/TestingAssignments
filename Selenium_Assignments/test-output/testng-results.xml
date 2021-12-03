@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-12-01T16:17:06 EST" name="Default suite" finished-at="2021-12-01T16:17:25 EST" duration-ms="18172">
+    <groups>
+    </groups>
+    <test started-at="2021-12-01T16:17:06 EST" name="Default test" finished-at="2021-12-01T16:17:25 EST" duration-ms="18172">
+      <class name="TestNg.Excel_Reader">
+        <test-method is-config="true" signature="LaunchingBrowser()[pri:0, instance:TestNg.Excel_Reader@485966cc]" started-at="2021-12-01T16:17:06 EST" name="LaunchingBrowser" finished-at="2021-12-01T16:17:08 EST" duration-ms="2115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchingBrowser -->
+        <test-method signature="Input()[pri:0, instance:TestNg.Excel_Reader@485966cc]" started-at="2021-12-01T16:17:08 EST" name="Input" finished-at="2021-12-01T16:17:24 EST" duration-ms="15765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Input -->
+        <test-method is-config="true" signature="ClosingBrowser()[pri:0, instance:TestNg.Excel_Reader@485966cc]" started-at="2021-12-01T16:17:24 EST" name="ClosingBrowser" finished-at="2021-12-01T16:17:25 EST" duration-ms="252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClosingBrowser -->
+      </class> <!-- TestNg.Excel_Reader -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
