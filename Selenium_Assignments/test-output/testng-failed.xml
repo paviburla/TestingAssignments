@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNg.Excel_Reader">
+      <class name="Assignments.Validation_Assert_Soft_Ass17">
         <methods>
-          <include name="ClosingBrowser"/>
           <include name="LaunchingBrowser"/>
-          <include name="Input"/>
+          <include name="HardAssert"/>
         </methods>
-      </class> <!-- TestNg.Excel_Reader -->
+      </class> <!-- Assignments.Validation_Assert_Soft_Ass17 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

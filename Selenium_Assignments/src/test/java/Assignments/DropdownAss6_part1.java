@@ -65,6 +65,11 @@ WebDriverManager.chromedriver().setup();
 		 WebElement country_dropdown = driver.findElement(By.xpath("//select[@id='country']"));
 			
 			Select slt3 = new Select(country_dropdown);
+			String defaultselect = slt3.getFirstSelectedOption().getText();
+			
+			System.out.println("------DefaultSelect-----"+defaultselect);
+			Boolean multiselect = slt3.isMultiple();
+			System.out.println("---MultiSelect----"+multiselect);
 			
 			List<WebElement> all = slt3.getOptions();
 			

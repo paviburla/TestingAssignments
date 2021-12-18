@@ -44,6 +44,7 @@ WebDriver driver;
 		String PhNo = sheet.getRow(1).getCell(2).getStringCellValue();
 		System.out.println("----FirstName---"+Firstname);
 		System.out.println("----Lastname---"+Lastname);
+		//System.out.println("----PhNo---"+PhoneString);
 		System.out.println("----PhNo---"+PhNo);
 		
 		

@@ -11,7 +11,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Bootstrap_DropdownAss6_part2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		WebDriverManager.chromedriver().setup();
@@ -37,11 +37,37 @@ public class Bootstrap_DropdownAss6_part2 {
 		}
 		
      driver.findElement(By.xpath("//input[@value='HTML']")).click();
+     Thread.sleep(1000);
      
-     driver.close();
+     driver.findElement(By.
+    	xpath("/html[1]/body[1]/div[3]/table[1]/tbody[1]/tr[2]/td[3]/div[1]/span[1]/div[1]/ul[1]/li[5]/a[1]/label[1]/input[1]"
+     		)).click();
+     
+    // driver.findElement(By.xpath("//input[@value='CSS']")).click();
+     Thread.sleep(1000);
      
      
-     driver.findElement(By.xpath("//input[@value='CSS']")).click();
+
+     List<WebElement>allcheckboxes_check = driver.findElements(By.xpath("//label[@class='checkbox']"));
+
+     int total_checkboxes_check = allcheckboxes_check.size();
+
+     for(int i=0;i<total_checkboxes_check;i++)
+     {
+    	allcheckboxes_check.get(i).click();
+    	
+Thread.sleep(1000);
+
+     }
+
+     
+   
+     
+     
+     
+     
+     
+    // driver.close();
      
      
 	}

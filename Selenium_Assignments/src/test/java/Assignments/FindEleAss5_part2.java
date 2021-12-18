@@ -19,19 +19,22 @@ WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.google.co.in/");
+		driver.manage().window().maximize();
 		
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("selenium");
 		Thread.sleep(3000);
 		
-      List<WebElement> allemnts = driver.findElements(By.xpath("//input[@title='Search']"));
-		
-	
-		
-
+      List<WebElement> allemnts = driver.findElements(By.xpath("//li[@role='presentation']"));
 		
 		for(int i=0;i<allemnts.size();i++)
 		{
 			String dropdown_opt = allemnts.get(i).getText();
+			
+			if (dropdown_opt.equalsIgnoreCase("selenium foods"))
+			{
+				allemnts.get(i).click();
+				break;
+			}
 			
 			System.out.println("-----DropdownOptions---"+dropdown_opt);
 		}

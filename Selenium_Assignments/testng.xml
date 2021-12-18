@@ -3,9 +3,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="TestNg.Validate_PageTitle"/>
-      <class name="TestNg.Annotation"/>
-      <class name="TestNg.Priority"/>
+      <class name="Assignments.Validation_Assert_Soft_Ass17"/>
+      <class name="Assignments.TestSuite_Ass18"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,21 +1,19 @@
 package Assignments;
 
-import java.util.List;
-
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FramesHandlingAss7_part1 {
+public class FrameHandling_Alerts_Ass7_part2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 WebDriverManager.chromedriver().setup();
 		
 		WebDriver driver = new ChromeDriver();
@@ -47,16 +45,21 @@ WebDriverManager.chromedriver().setup();
 		driver.findElement(By.xpath("//input[@id='surname']")).sendKeys("Burla");
 		driver.findElement(By.xpath("//input[@value='Save']")).click();
 		
-		driver.findElement(By.xpath("//a[normalize-space()='Contacts']")).click();
-		driver.findElement(By.xpath("//input[@onclick='checkAll(this);']")).click();
-		
-		driver.close();
-		
-		
-		
-		
-		
 
+		driver.findElement(By.xpath("//a[normalize-space()='Contacts']")).click();
+		driver.findElement(By.xpath("//tbody/tr[5]/td[8]/a[4]/i[1]")).click();
+		
+		Alert alt = driver.switchTo().alert();
+		
+		String text = alt.getText();
+		System.out.println("----AlertText-----"+text);
+		
+		alt.dismiss();
+		driver.findElement(By.xpath("//tbody/tr[5]/td[8]/a[4]/i[1]")).click();
+		alt.accept();
+		
+		driver.close();	
+		
 	}
 
 }

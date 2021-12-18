@@ -1,17 +1,14 @@
 package Assignments;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FramesHandlingAss7_part1 {
+public class FileUpload_Ass12_Part1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -29,8 +26,7 @@ WebDriverManager.chromedriver().setup();
 		
 		driver.findElement(By.xpath("//input[@value='Login']")).click();
 		
-		driver.navigate().refresh();
-		
+				
 		WebElement webele = driver.findElement(By.xpath("//frame[@name='mainpanel']"));
 		
 		driver.switchTo().frame(webele);
@@ -41,19 +37,6 @@ WebDriverManager.chromedriver().setup();
 		act.moveToElement(wb).build().perform();
 		
 		driver.findElement(By.xpath("//a[normalize-space()='New Contact']")).click();
-
-		
-		driver.findElement(By.xpath("//input[@id='first_name']")).sendKeys("Pavithra");
-		driver.findElement(By.xpath("//input[@id='surname']")).sendKeys("Burla");
-		driver.findElement(By.xpath("//input[@value='Save']")).click();
-		
-		driver.findElement(By.xpath("//a[normalize-space()='Contacts']")).click();
-		driver.findElement(By.xpath("//input[@onclick='checkAll(this);']")).click();
-		
-		driver.close();
-		
-		
-		
 		
 		
 
